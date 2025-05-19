@@ -1,4 +1,4 @@
-package com.borsos.laszlo.f4mqfm_beadando_mp2_1
+package com.borsos.laszlo.f4mqfm_mp2_1
 
 import android.os.Bundle
 import android.os.Handler
