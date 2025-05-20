@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val observer = MyLifecycleObserver(this)
+        lifecycle.addObserver(observer)
+
         val textView = findViewById<TextView>(R.id.textView)
         val editText = findViewById<EditText>(R.id.editText)
         val button = findViewById<Button>(R.id.button)
