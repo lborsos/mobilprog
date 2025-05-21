@@ -21,12 +21,10 @@ class MainActivityMVVM : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView)
         val editText = findViewById<EditText>(R.id.editText)
 
-        // figyeljük a ViewModel változását
         viewModel.text.observe(this) { newText ->
             textView.text = newText
         }
 
-        // figyeljük az EditText változásait
         editText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 viewModel.onTextChanged(s.toString())
